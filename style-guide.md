@@ -1,93 +1,93 @@
-# Front-end Style Guide
+# Guia de Estilo Front-end 
 
 ## Layout
 
-The designs were created to the following widths:
+Los diseños fueron creados con las siguientes dimensiones:
 
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
+## Colores
 
-### Theme 1
+### Tema 1
 
-#### Backgrounds
+#### Fondos - Backgrounds
 
-- Very dark desaturated blue (main background): hsl(222, 26%, 31%)
-- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%)
-- Very dark desaturated blue (screen background): hsl(224, 36%, 15%)
+- Azul desaturado muy oscuro (fondo principal - main background): hsl(222, 26%, 31%)
+- Azul desaturado muy oscuro (fondo del interruptor, fondo del teclado - toggle background, keypad background): hsl(223, 31%, 20%)
+- Azul desaturado muy oscuro ( fondo de la pantalla - screen background): hsl(224, 36%, 15%)
 
-#### Keys
+#### Teclas
 
-- Desaturated dark blue (key background): hsl(225, 21%, 49%)
-- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
+- Azul oscuro desaturado (fondo de la tecla): hsl(225, 21%, 49%)
+- Azul oscuro desaturado (sombra de la tecla): hsl(224, 28%, 35%)
 
-- Red (key background, toggle): hsl(6, 63%, 50%)
-- Dark red (key shadow): hsl(6, 70%, 34%)
+- Rojo (fondo de la tecla, interruptor): hsl(6, 63%, 50%)
+- Rojo oscuro (sombra de la tecla): hsl(6, 70%, 34%)
 
-- Light grayish orange (key background): hsl(30, 25%, 89%)
-- Grayish orange (key shadow): hsl(28, 16%, 65%)
+- Naranja grisáceo claro (fondo de la tecla): hsl(30, 25%, 89%)
+- Naranja grisáceo (sombra de la tecla): hsl(28, 16%, 65%)
 
-#### Text
+#### Texto
 
-- Very dark grayish blue: hsl(221, 14%, 31%)
-- White: hsl(0, 0, 100%)
+- Azul grisáceo muy oscuro: hsl(221, 14%, 31%)
+- Blanco: hsl(0, 0, 100%)
 
-### Theme 2
+### Tema 2
 
-#### Backgrounds
+#### Fondos - Backgrounds
 
-- Light gray (main background): hsl(0, 0%, 90%)
-- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
-- Very light gray (screen background): hsl(0, 0%, 93%)
+- Gris claro (fondo principal - main background): hsl(0, 0%, 90%)
+- Rojo grisáceo (fondo del interruptor, fondo del teclado - toggle background, keypad background): hsl(0, 5%, 81%)
+- Gris muy claro (fondo de la pantalla - screen background): hsl(0, 0%, 93%)
 
-#### Keys
+#### Teclas
 
-- Dark moderate cyan (key background): hsl(185, 42%, 37%)
-- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+- Cian moderado oscuro (fondo de la tecla): hsl(185, 42%, 37%)
+- Cian muy oscuro (sombra de la tecla): hsl(185, 58%, 25%)
 
-- Orange (key background, toggle): hsl(25, 98%, 40%)
-- Dark orange (key shadow): hsl(25, 99%, 27%)
+- Naranja (fondo de la tecla, interruptor): hsl(25, 98%, 40%)
+- Naranja oscuro (sombra de la tecla): hsl(25, 99%, 27%)
 
-- Light grayish yellow (key background): hsl(45, 7%, 89%)
-- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+- Amarillo grisáceo claro (fondo de la tecla): hsl(45, 7%, 89%)
+- Naranja grisáceo oscuro (sombra de la tecla): hsl(35, 11%, 61%)
 
-#### Text
+#### Texto
 
-- Very dark grayish yellow: hsl(60, 10%, 19%)
-- White (text): hsl(0, 0, 100%)
+- Amarillo grisáceo muy oscuro: hsl(60, 10%, 19%)
+- Blanco (texto): hsl(0, 0, 100%)
 
-### Theme 3
+### Tema 3
 
-#### Backgrounds
+#### Fondos - Backgrounds
 
-- Very dark violet (main background): hsl(268, 75%, 9%)
-- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+- Violeta muy oscuro (fondo principal - main background): hsl(268, 75%, 9%)
+- Violeta muy oscuro (fondo del interruptor, fondo del teclado, fondo de la pantalla - toggle background, keypad background, screen background): hsl(268, 71%, 12%)
 
-#### Keys
+#### Teclas
 
-- Dark violet (key background): hsl(281, 89%, 26%)
-- Vivid magenta (key shadow): hsl(285, 91%, 52%)
+- Violeta oscuro (fondo de la tecla): hsl(281, 89%, 26%)
+- Magenta vivo (sombra de la tecla): hsl(285, 91%, 52%)
 
-- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
-- Soft cyan (key shadow): hsl(177, 92%, 70%)
+- Cian puro (fondo de la tecla, interruptor): hsl(176, 100%, 44%)
+- Cian suave (sombra de la tecla): hsl(177, 92%, 70%)
 
-- Very dark violet (key background): hsl(268, 47%, 21%)
-- Dark magenta (key shadow): hsl(290, 70%, 36%)
+- Violeta muy oscuro (fondo de la tecla): hsl(268, 47%, 21%)
+- Magenta oscuro (sombra de la tecla): hsl(290, 70%, 36%)
 
-#### Text
+#### Texto
 
-- Light yellow: hsl(52, 100%, 62%)
-- Very dark blue: hsl(198, 20%, 13%)
-- White (text): hsl(0, 0, 100%)
+- Amarillo claro: hsl(52, 100%, 62%)
+- Azul muy oscuro: hsl(198, 20%, 13%)
+- Blanco (texto): hsl(0, 0, 100%)
 
-## Typography
+## Tipografía
 
-### Body Copy
+### Copia de Body
 
-- Font size (numbers): 32px
+- Tamaño de fuente (números): 32px
 
-### Font
+### Fuente
 
 - Family: [Spartan](https://fonts.google.com/specimen/Spartan)
 - Weights: 700

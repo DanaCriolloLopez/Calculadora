@@ -1,12 +1,12 @@
-/* Importing Font */
+/* Importando fuente */
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
-/* Font settings */
+/* Configuración de fuente  */
 *{
     font-family: 'Spartan', sans-serif;
 }
 
-/* Cores */
+/* Colores */
 :root{
     --background          : #3a4764;
     --background-dark     : #232c43;
@@ -28,7 +28,7 @@
     --transition: 1s;
 }
 
-/* Background settings */
+/* Configuración del fondo */
 .calc{
     background-color: var(--background);
     width: 100vw;
@@ -42,7 +42,7 @@
     transform: translate(-50%, -50%);
 }
 
-/* Top of the calculator */
+/* Parte superior de la calculadora */
 .calc-top h3{
     color: var(--key-color-top);
     transition: var(--transition);
@@ -73,7 +73,7 @@
     transition: var(--transition);
 }
 
-/* Keys or Bottons */
+/* Teclas o botones */
 .calc-keys{
     background-color: var(--background-dark);
     border-radius: 10px;
@@ -109,7 +109,7 @@
     transition: var(--transition);
 }
 
-/* Keys hover animations */
+/* Animaciones de hover de las teclas */
 .calc-keys input:hover{
     border: 2px solid var(--key-background);
     color: var(--key-color-top);
@@ -129,7 +129,7 @@
     transition: 0.5s;
 }
 
-/* Keys activated */
+/* Teclas activadas */
 .calc-keys input:active{
     box-shadow: 3px 3px 3px var(--key-shadow);
     background-color: var(--key-background);
@@ -146,12 +146,12 @@
     color: var(--key-background);
 }
 
-/* Toggle theme button */
-/* Basics configs for styling input type range */
+/* Botón de cambio de tema */
+/* Configuraciones básicas para estilizar el input de tipo rango */
 input[type=range] {
-    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
-    background: transparent; /* Otherwise white in Chrome */
+    -webkit-appearance: none; /* Oculta el control deslizante para poder crear uno personalizado */
+    width: 100%; /* Ancho especifico requerido por Firefox. */
+    background: transparent; /* En Chrome, si no se agrega, aparece blanco */
 }
   
 input[type=range]::-webkit-slider-thumb {
@@ -159,21 +159,21 @@ input[type=range]::-webkit-slider-thumb {
 }
   
 input[type=range]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    outline: none; /* Elimina el borde azul. Deberías agregar algún estilo de foco por motivos de accesibilidad. */
 }
   
 input[type=range]::-ms-track {
     width: 100%;
     cursor: pointer;
   
-    /* Hides the slider so custom styles can be added */
+    /* Oculta el control deslizante para poder agregar estilos personalizados */
     background: transparent; 
     border-color: transparent;
     color: transparent;
 }
 
-/* Styling Thumb for diferents browsers */
-/* thumb = circle on the range */
+/* Styling Thumb para diferentes navegadores */
+/* thumb = círculo en el rango */
 
 /* WebKit/Blink */
 input[type=range]::-webkit-slider-thumb {
@@ -210,7 +210,7 @@ input[type=range]::-ms-thumb {
     cursor: pointer;
     box-shadow: 1px 1px 1px var(--key-red-shadow);
 }
-/* Style for background */
+/* Estilo para el fondo */
 .toggle{
     background-color: var(--background-dark);
     border-radius: 25px;
@@ -218,7 +218,7 @@ input[type=range]::-ms-thumb {
     padding: 0 6px !important;
     transition: var(--transition);
 }
-/* This make user can click and drag the button */
+/* Esto permite que el usuario pueda hacer clic y arrastrar el botón */
 .toggle input{
     width: 100%;
 }
