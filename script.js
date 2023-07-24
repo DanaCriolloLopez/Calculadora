@@ -105,6 +105,42 @@ function funcionalidadPresion(){
     });
 }
 
+//Botón Funcionalidad Masa
+function funcionalidadMasa(){
+    //Utilizamos SweetAlert2 para esta Funcionalidad
+    Swal.fire({
+        title: 'Ingrese la masa en Kilogramos:',
+        input: 'text',
+        inputAttributes: {
+            type: 'number',
+            step: '0.01',
+        },
+        showCancelButton: true,
+        confirmButtonColor: '#2b3242',
+        confirmButtonText: 'Convertir a Gramos',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        preConfirm: (tempKg) => {
+            if (!tempKg || isNaN(tempKg)) {
+                Swal.showValidationMessage('Ingrese una masa válida');
+            }
+            return tempKg;
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let tempKg = parseFloat(result.value);
+            let tempGram = kilogramo_gramo(tempKg);
+            result.value = tempGram.toFixed(2);
+            Swal.fire({
+                title: 'Masa en Gramos:',
+                html: `<strong>${tempGram.toFixed(2)} g</strong>`,
+                icon: 'success',
+                confirmButtonColor: '#555',
+            });
+        }
+    });
+}
+
 
 //Función que calcula la conversión de Grados Centígrados a Fahrenheit
 function centigrados_fahrenheit(centigrados){
@@ -114,6 +150,11 @@ function centigrados_fahrenheit(centigrados){
 //Función que calcula la conversión de Pascal a Bar
 function pascal_bar(pascal){
     return (pascal / 100000).toExponential();
+}
+
+//Función que calcula la conversión de Kilos a Gramos
+function kilogramo_gramo(kilogramo) {
+    return kilogramo * 1000; 
 }
 /*
     ====================================================
