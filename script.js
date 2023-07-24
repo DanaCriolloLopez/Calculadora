@@ -34,6 +34,46 @@ function del(){
     result.value = result2.substring(0, result2.length - 1);
 }
 
+//Botón Funcionalidad Temperatura
+function funcionalidadTemperatura(){
+    Swal.fire({
+        title: 'Ingrese la temperatura en grados centígrados:',
+        input: 'text',
+        inputAttributes: {
+            type: 'number',
+            step: '0.01', // Ajusta la precisión del número 
+        },
+        showCancelButton: true,
+        confirmButtonColor: '#2b3242',
+        confirmButtonText: 'Convertir a Fahrenheit',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        preConfirm: (tempC) => {
+            if (!tempC || isNaN(tempC)) {
+                Swal.showValidationMessage('Ingrese una temperatura válida');
+            }
+            return tempC;
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let tempC = parseFloat(result.value);
+            let tempF = centigrados_fahrenheit(tempC);
+            result.value = tempF.toFixed(2);
+            Swal.fire({
+                title: 'Temperatura en Fahrenheit:',
+                html: `<strong>${tempF.toFixed(2)} °F</strong>`,
+                icon: 'success',
+                confirmButtonColor: '#2b3242',
+            });
+        }
+    });   
+}
+
+//Función que calcula la converción de Grados Centígrados a Fahrenheit
+function centigrados_fahrenheit(centigrados){
+    return (centigrados * 9 / 5) + 32;
+}
+
 /*
     ====================================================
     ================== CAMBIO DE TEMA ==================
