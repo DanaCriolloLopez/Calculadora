@@ -141,6 +141,41 @@ function funcionalidadMasa(){
     });
 }
 
+//Botón Funcionalidad Longitud
+function funcionalidadLongitud(){
+    //Utilizamos SweetAlert2 para esta Funcionalidad
+    Swal.fire({
+        title: 'Ingrese la longitud en Metros:',
+        input: 'text',
+        inputAttributes: {
+            type: 'number',
+            step: '0.01',
+        },
+        showCancelButton: true,
+        confirmButtonColor: '#2b3242',
+        confirmButtonText: 'Convertir a Centímetros',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        preConfirm: (tempM) => {
+            if (!tempM || isNaN(tempM)) {
+                Swal.showValidationMessage('Ingrese una longitud válida');
+            }
+            return tempM;
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let tempM = parseFloat(result.value);
+            let tempCm = metro_centimetro(tempM);
+            result.value = tempCm.toFixed(2);
+            Swal.fire({
+                title: 'Longitud en Centímetros:',
+                html: `<strong>${tempCm.toFixed(2)} cm</strong>`,
+                icon: 'success',
+                confirmButtonColor: '#555',
+            });
+        }
+    });
+}
 
 //Función que calcula la conversión de Grados Centígrados a Fahrenheit
 function centigrados_fahrenheit(centigrados){
@@ -155,6 +190,11 @@ function pascal_bar(pascal){
 //Función que calcula la conversión de Kilos a Gramos
 function kilogramo_gramo(kilogramo) {
     return kilogramo * 1000; 
+}
+
+//Función que calcula la conversión de Metros a Centímetros
+function metro_centimetro(metro) {
+    return metro * 100; 
 }
 /*
     ====================================================
