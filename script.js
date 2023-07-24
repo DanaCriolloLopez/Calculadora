@@ -36,6 +36,7 @@ function del(){
 
 //Botón Funcionalidad Temperatura
 function funcionalidadTemperatura(){
+    //Utilizamos SweetAlert2 para esta Funcionalidad
     Swal.fire({
         title: 'Ingrese la temperatura en grados centígrados:',
         input: 'text',
@@ -68,12 +69,52 @@ function funcionalidadTemperatura(){
         }
     });   
 }
+//Botón Funcionalidad Presión
+function funcionalidadPresion(){
+    //Utilizamos SweetAlert2 para esta Funcionalidad
+    Swal.fire({
+        title: 'Ingrese la presión en Pascal:',
+        input: 'text',
+        inputAttributes: {
+            type: 'number',
+            step: '0.01',
+        },
+        showCancelButton: true,
+        confirmButtonColor: '#2b3242',
+        confirmButtonText: 'Convertir a Bar',
+        cancelButtonText: 'Cancelar',
+        showLoaderOnConfirm: true,
+        preConfirm: (tempPa) => {
+            if (!tempPa || isNaN(tempPa)) {
+                Swal.showValidationMessage('Ingrese una presión válida');
+            }
+            return tempPa;
+        },
+    }).then((result) => {
+        if (result.isConfirmed) {
+            let tempPa = parseFloat(result.value);
+            let tempBar = pascal_bar(tempPa);
+            result.value = tempBar;
+            Swal.fire({
+                title: 'Presión en Bar:',
+                html: `<strong>${tempBar} Bar</strong>`,
+                icon: 'success',
+                confirmButtonColor: '#555',
+            });
+        }
+    });
+}
 
-//Función que calcula la converción de Grados Centígrados a Fahrenheit
+
+//Función que calcula la conversión de Grados Centígrados a Fahrenheit
 function centigrados_fahrenheit(centigrados){
     return (centigrados * 9 / 5) + 32;
 }
 
+//Función que calcula la conversión de Pascal a Bar
+function pascal_bar(pascal){
+    return (pascal / 100000).toExponential();
+}
 /*
     ====================================================
     ================== CAMBIO DE TEMA ==================
